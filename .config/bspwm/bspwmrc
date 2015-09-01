@@ -53,7 +53,7 @@ sxhkd -f 100 &
 panel &
 xrandr -r 144 -s 1920x1080 &
 razercfg -r 4 &
-feh --bg-fill /home/nitzan/Pictures/Space.png &
+feh --bg-fill /home/$USER/Pictures/Space.png &
 xsetroot -cursor_name left_ptr &
 xrdb -merge .Xresources &
 setxkbmap -option grp:switch,grp:alt_shift_toggle, us,il &
