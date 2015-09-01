@@ -1,0 +1,88 @@
+
+Xcursor.theme: Adwaita
+
+URxvt.font: xft:terminus:size=9
+
+URxvt.scrollBar: false
+URxvt.geometry: 88x25
+
+URxvt.background: [90]#1f1e1b
+URxvt.foreground: #8E8F93
+URxvt.depth: 32
+
+URxvt.colorBD: #9D9EA2
+URxvt.colorIT: #9D9EA2
+URxvt.colorUL: #9D9EA2
+
+URxvt.cursorColor: #FFFFFF
+
+!URxvt*color0: #661921
+!URxvt*color1: #7b2913
+!URxvt*color2: #3f1d42
+!URxvt*color3: #8b3130
+!URxvt*color4: #a43c21
+!URxvt*color5: #b64642
+!URxvt*color6: #c3541d
+!URxvt*color7: #232558
+!URxvt*color8: #6c2642
+!URxvt*color9: #d5662f
+!URxvt*color10: #f16f3e
+!URxvt*color11: #ff8e49
+!URxvt*color12: #9d364b
+!URxvt*color13: #64345e
+!URxvt*color14: #f78626
+!URxvt*color15: #ce5451
+
+! vim: set ft=xdefaults:
+
+
+! Base16 Solarized
+! Scheme: Ethan Schoonover (http://ethanschoonover.com/solarized)
+
+#define base00 #002b36
+#define base01 #073642
+#define base02 #586e75
+#define base03 #657b83
+#define base04 #839496
+#define base05 #93a1a1
+#define base06 #eee8d5
+#define base07 #fdf6e3
+#define base08 #dc322f
+#define base09 #cb4b16
+#define base0A #b58900
+#define base0B #859900
+#define base0C #2aa198
+#define base0D #268bd2
+#define base0E #6c71c4
+#define base0F #d33682
+
+!*.foreground:   base02
+!*.background:   base07
+!*.cursorColor:  base02
+
+URxvt*.color0:       base00
+URxvt*.color1:       base08
+URxvt*.color2:       base0B
+URxvt*.color3:       base0A
+URxvt*.color4:       base0D
+URxvt*.color5:       base0E
+URxvt*.color6:       base0C
+URxvt*.color7:       base05
+
+URxvt*.color8:       base03
+URxvt*.color9:       base08
+URxvt*.color10:      base0B
+URxvt*.color11:      base0A
+URxvt*.color12:      base0D
+URxvt*.color13:      base0E
+URxvt*.color14:      base0C
+URxvt*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+URxvt*.color16:      base09
+URxvt*.color17:      base0F
+URxvt*.color18:      base01
+URxvt*.color19:      base02
+URxvt*.color20:      base04
+URxvt*.color21:      base06
