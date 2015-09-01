@@ -28,4 +28,14 @@ Preview:
 ![alt tag](http://i.imgur.com/V1MsQTf.png)
 ![alt tag](http://i.imgur.com/geND26L.png)
 
+-------------
+
+How to Install:
+-------------
+
+chmod +x install.sh  
+./install.sh  
+
+This will move all the config files to the appropriate place, and backup your old config files.  
+
   
