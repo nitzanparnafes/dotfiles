@@ -22,4 +22,10 @@ Fonts: Terminus, Open-Sans, Font-Awesome (icons in panel)
 
 -------------  
 
+Preview:  
+
+![alt tag](http://i.imgur.com/Va57ggS.png)  
+![alt tag](http://i.imgur.com/V1MsQTf.png)
+![alt tag](http://i.imgur.com/geND26L.png)
+
   
