@@ -30,12 +30,3 @@ Preview:
 
 -------------
 
-How to Install:
--------------
-
-chmod +x install.sh  
-./install.sh  
-
-This will move all the config files to the appropriate place, and backup your old config files.  
-
-  
