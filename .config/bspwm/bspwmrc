@@ -59,7 +59,7 @@ xrdb -merge .Xresources &
 setxkbmap -option grp:switch,grp:alt_shift_toggle, us,il &
 compton --unredir-if-possible &
 xfsettingsd &
-
+nvidia-settings &
 # Launch some other programs
 
 steam %U &
