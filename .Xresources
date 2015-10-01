@@ -6,7 +6,8 @@ URxvt.font: xft:terminus:size=9
 URxvt.scrollBar: false
 URxvt.geometry: 88x25
 
-URxvt.background: [90]#1f1e1b
+#URxvt.background: [90]#1f1e1b
+URxvt.background: [90]#2b2e36
 URxvt.foreground: #8E8F93
 URxvt.depth: 32
 
