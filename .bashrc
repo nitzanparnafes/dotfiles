@@ -16,7 +16,7 @@ fi
 
 
 # Put your fun stuff here.
-export PS1="\[\033[32m\]┌╴[\w]\[\033[0m\]\n\[\033[32m\]└╴\[\033[1;36m\]\u\[\033[1;33m\] >>> \[\033[0m\]"
+export PS1="\[\033[32m\]┌╴[\w]\[\033[0m\]\n\[\033[32m\]└╴\[\033[1;36m\]\u\[\033[1;33m\] > \[\033[0m\]"
 alias scrot='scrot ~/Pictures/Screenshots/%b%d::%H%M%S.png'
 alias sysupdate='sudo emerge --sync && sudo emerge --ask -uDU --with-bdeps=y @world'
 alias suspend='sudo pm-suspend'
