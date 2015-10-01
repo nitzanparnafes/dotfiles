@@ -102,7 +102,7 @@ super + n
 #
 
 super + Return
-	urxvt -n terminal
+	urxvt 
 
 super + space
 	dmenu_run -fn 'Terminus:size=9' -x 1440 -w 240 -h 24 -nb '#252527' -nf '#A3A6AB' -dim 0.3
