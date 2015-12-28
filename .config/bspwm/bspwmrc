@@ -1,17 +1,21 @@
-#! /bin/sh
+#!/bin/sh
+#
+# BSPWM config
+#
 
 # Declare variables
 
 PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=24
+PANEL_HEIGHT=26
+
 # And export them
 
 export PANEL_FIFO PANEL_HEIGHT
 
 # BSPWM Settings
 
-bspc config border_width        3
-bspc config window_gap         15
+bspc config border_width        7
+bspc config window_gap         25
 bspc config split_ratio         0.52
 bspc config borderless_monocle  true
 bspc config gapless_monocle     true
@@ -20,26 +24,39 @@ bspc config focus_by_distance   true
 
 # Workspaces
 
-bspc monitor -d $(echo '') $(echo '') $(echo '') $(echo '') $(echo '') 
+bspc monitor -d 1 2 3 4 5
 
 # Padding
 
-bspc config -d $(echo '') left_padding 80
-bspc config -d $(echo '') right_padding 80
-bspc config -d $(echo '') bottom_padding 60
-bspc config -d $(echo '') top_padding 60
-bspc config -d $(echo '') left_padding 80
-bspc config -d $(echo '') right_padding 80
-bspc config -d $(echo '') bottom_padding 60
-bspc config -d $(echo '') top_padding 60
+bspc config -d 2 left_padding 80
+bspc config -d 2 right_padding 80
+bspc config -d 2 bottom_padding 60
+bspc config -d 2 top_padding 80
+bspc config -d 4 left_padding 80
+bspc config -d 4 right_padding 80
+bspc config -d 4 bottom_padding 60
+bspc config -d 4 top_padding 60
+bspc config -d 5 left_padding 80
+bspc config -d 5 right_padding 80
+bspc config -d 5 bottom_padding 60
+bspc config -d 5 top_padding 60
+
+
+# Colors
+
+bspc config focused_border_color "#e0e0e0"
+bspc config normal_border_color "#949494"
+bspc config active_border_color "#949494"
+bspc config urgent_border_color "#949494"
+
 
 # Rules
 
 bspc rule -a Chromium desktop=^1
 bspc rule -a Firefox desktop=^1
 bspc rule -a Steam desktop=^2
-bspc rule -a teamspeak3 desktop=^2
-bspc rule -a thunar floating=on desktop=^4
+bspc rule -a Teamspeak3 desktop=^2
+bspc rule -a thunar desktop=^4
 bspc rule -a urxvt floating=on
 bspc rule -a ncmpcpp floating=off desktop=^5
 bspc rule -a alsamixer floating=off desktop=^5
@@ -47,29 +64,31 @@ bspc rule -a ranger floating=off desktop=^4
 bspc rule -a ncmpcppclock floating=off desktop=^5
 bspc rule -a terminal1 floating=off desktop=^3
 bspc rule -a terminal floating=off
+
 # Launch essential programs
 
 sxhkd -f 100 &
 panel &
 xrandr -r 144 -s 1920x1080 &
 razercfg -r 4 &
-feh --bg-fill /home/$USER/Pictures/wallpaper1.jpg &
+compton --unredir-if-possible &
+
+# Set wallpaper
+feh --bg-fill /home/$USER/Pictures/Xhap53f.jpg &
+# Set mouse cursor
 xsetroot -cursor_name left_ptr &
+###
 xrdb -merge .Xresources &
 setxkbmap -option grp:switch,grp:alt_shift_toggle, us,il &
-compton --unredir-if-possible &
 xfsettingsd &
-nvidia-settings &
+
 # Launch some other programs
 
 steam %U &
-#teamspeak3 &
-#chromium &
 firefox-bin &
+
 sleep 1.3
 urxvt -name ncmpcpp -e ncmpcpp &
 urxvt -name alsamixer -e alsamixer &
-urxvt -name ranger -e ranger &
 urxvt -name ncmpcppclock -e ncmpcpp -s clock &
 urxvt -name terminal1 &
-
