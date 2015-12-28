@@ -18,7 +18,7 @@ Web Browser: Firefox
 Image Browser: Feh  
 File Manager: Thunar + Ranger  
 Music Player: mpd + ncmpcpp + mpc  
-Fonts: Terminus, Open-Sans, STLarch (icons in panel)  
+Fonts: ProFont, Open-Sans, STLarch (icons in panel)  
 
 -------------  
 
