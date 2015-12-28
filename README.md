@@ -13,7 +13,7 @@ Programs I use:
   bar (https://github.com/krypt-n/bar)  
   
 -------------   
-Wallpaper: https://i.imgur.com/ZQRfOL1.jpg
+Wallpaper: https://i.imgur.com/ZQRfOL1.jpg  
 Web Browser: Firefox  
 Image Browser: Feh  
 File Manager: Thunar + Ranger  
