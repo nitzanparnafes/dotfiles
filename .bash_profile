@@ -4,4 +4,4 @@
 # runs your .bashrc and is recommended by the bash info pages.
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-[[ $(tty) = "/dev/tty1" ]] && exec startx
+[[ $(tty) = "/dev/tty1" ]] && exec startx -- vt1 &> /dev/null
