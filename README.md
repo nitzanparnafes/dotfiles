@@ -24,7 +24,7 @@ Fonts: ProFont, Open-Sans, STLarch (icons in panel)
 
 Preview:  
 
-![alt tag](https://i.imgur.com/Hx56oOt.png)  
+![alt tag](http://i.imgur.com/7fSpfhv.png)  
 
 
 -------------
