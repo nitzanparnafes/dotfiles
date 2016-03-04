@@ -74,7 +74,7 @@ razercfg -r 4 &
 compton --unredir-if-possible &
 
 # Set wallpaper
-feh --bg-fill /home/$USER/Pictures/Xhap53f.jpg &
+feh --bg-fill /home/$USER/Pictures/wallpaper.jpg &
 # Set mouse cursor
 xsetroot -cursor_name left_ptr &
 ###
