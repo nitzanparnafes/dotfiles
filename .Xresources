@@ -1,0 +1,46 @@
+Xcursor.theme: Vanilla-DMZ-AA
+
+URxvt.font: xft:ProFont:size=9,xft:comix
+URxvt.scrollBar: false
+URxvt.geometry: 88x25
+
+URxvt.background: [80]#222
+URxvt.foreground: #8E8F93
+URxvt.depth: 32
+
+URxvt.colorBD: #9D9EA2
+URxvt.colorIT: #9D9EA2
+URxvt.colorUL: #9D9EA2
+
+URxvt.cursorColor: #FFFFFF
+
+! black
+*.color0:       #111111
+*.color8:       #181818
+! red
+*.color1:       #aa4450
+*.color9:       #ff6a6a
+! green
+*.color2:       #719611
+*.color10:      #b1d631
+! yellow
+*.color3:       #cc8800
+*.color11:      #ff9800
+! blue
+*.color4:       #6688aa
+*.color12:      #90b0d1
+! magenta
+*.color5:       #8f6f8f
+*.color13:      #8181a6
+! cyan
+*.color6:       #528b8b
+*.color14:      #87ceeb
+! white
+*.color7:       #d3d3d3
+*.color15:      #c1cdc1
+! stylized
+*.colorIT:      #719611
+*.colorBD:      #d3d3d3
+*.colorUL:      #528b8b
+
+

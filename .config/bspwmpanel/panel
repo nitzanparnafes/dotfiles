@@ -1,0 +1,84 @@
+#!/bin/sh
+#
+# Lemonbar script
+#
+
+PANEL_FIFO=/tmp/panel-fifo
+
+PANEL_FONT_FAMILY="ProFont:size=8"
+ICON_FONT="Stlarch:size=14"
+
+
+if [ $(pgrep -cx panel) -gt 1 ] ; then
+	printf "%s\n" "The panel is already running." >&2
+	exit 1
+fi
+
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+
+bspc config top_padding $PANEL_HEIGHT
+bspc control --subscribe > "$PANEL_FIFO" &
+
+# title
+xtitle -sf 'T%s' > "$PANEL_FIFO" &
+
+# clock
+while true;
+	do
+		echo 'C' $(date +"%H:%M");
+	sleep 5;
+done > "$PANEL_FIFO" &
+
+# date
+while true;
+	do
+		echo 'D' $(date +'%b %d');
+	sleep 5;
+done > $PANEL_FIFO &
+
+# alsa volume
+while true;
+do
+	ALSA_VOLUME=$(amixer -D pulse get Master | grep -o '...%' | head -n 1 | sed 's/\[//' | sed 's/%//' | sed 's/ //' )
+	if [ $ALSA_VOLUME -ge 70 ]
+	then
+		echo V'' $ALSA_VOLUME
+	fi
+	if [ $ALSA_VOLUME -gt 0 -a $ALSA_VOLUME -lt 70 ]
+	then
+		echo V'' $ALSA_VOLUME
+	fi
+	if [ $ALSA_VOLUME -eq 0 ]
+	then
+		echo V'' $ALSA_VOLUME
+	fi
+
+	sleep 0.1
+done > $PANEL_FIFO &
+
+# music
+while true;
+do
+	SONG_NAME=$(mpc current)
+	if [[ -n $(mpc status | grep paused) ]]
+	then
+		echo "R%{A:mpc prev:}%{A}  %{A:mpc play:}%{A}  %{A:mpc next:}%{A} $PADDING$PADDING  $SONG_NAME"
+	else
+		echo "R%{A:mpc prev:}%{A}  %{A:mpc pause:}%{A}   %{A:mpc next:}%{A} $PADDING$PADDING  $SONG_NAME"
+	fi
+	sleep 1
+done > $PANEL_FIFO &
+
+# power
+echo P'' > $PANEL_FIFO &
+
+. panel_colors
+
+
+
+cat "$PANEL_FIFO" | panel_bar | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -f "$ICON_FONT" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" -u 1 | sh &
+
+wait

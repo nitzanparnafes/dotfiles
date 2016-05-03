@@ -1,0 +1,78 @@
+#!/bin/sh
+#
+#
+
+. panel_colors
+
+num_mon=$(bspc query -M | wc -l)
+PADDING="  "
+
+while read -r line ; do
+	case $line in
+		D*)
+			# date output
+			date="$PADDING${line#?}$PADDING"
+			;;
+		R*)
+			# music info
+			music="$PADDING%{B$COLOR_FOCUSED_OCCUPIED_BG}%{F$COLOR_FOCUSED_OCCUPIED_FG}$PADDING${line#?}$PADDING%{F-}%{B-}"
+			;;
+		C*)
+			# clock output
+			clock="$PADDING${line#?}$PADDING"
+			;;
+		T*)
+			# xtitle output
+			title="$PADDING$PADDING${line#?}$PADDING$PADDING$PADDING$PADDING"
+			;;
+
+		V*)
+			# alsa volume
+			volume="$PADDING${line#?}$PADDING"
+			;;
+		P*)
+			# power
+			power="%{A1:sudo pm-suspend:}%{A2:sudo poweroff:}%{A3:sudo reboot:}$PADDING${line#?}$PADDING%{A}%{A}%{A}"
+			;;
+
+		W*)
+			# bspwm internal state
+			wm_infos=""
+			IFS=':'
+			set -- ${line#?}
+			while [ $# -gt 0 ] ; do
+				item=$1
+				name=${item#?}
+				case $item in
+					
+					O*)
+						# focused occupied desktop
+						wm_infos="${wm_infos}%{F$COLOR_FOCUSED_OCCUPIED_FG}%{B$COLOR_FOCUSED_OCCUPIED_BG}$PADDING$PADDING%{B-}%{F-}"
+						;;
+					F*)
+						# focused free desktop
+						wm_infos="${wm_infos}%{F$COLOR_FOCUSED_FREE_FG}%{B$COLOR_FOCUSED_FREE_BG}$PADDING$PADDING%{B-}%{F-}"
+						;;
+					U*)
+						# focused urgent desktop
+						wm_infos="${wm_infos}%{F$COLOR_FOCUSED_URGENT_FG}%{B$COLOR_FOCUSED_URGENT_BG}$PADDING$PADDING%{B-}%{F-}"
+						;;
+					o*)
+						# occupied desktop
+						wm_infos="${wm_infos}%{F$COLOR_OCCUPIED_FG}%{B$COLOR_OCCUPIED_BG}%{A:bspc desktop -f ${name}:}$PADDING$PADDING%{A}%{B-}%{F-}"
+						;;
+					f*)
+						# free desktop
+						wm_infos="${wm_infos}%{F$COLOR_FREE_FG}%{B$COLOR_FREE_BG}%{A:bspc desktop -f ${name}:}$PADDING$PADDING%{A}%{B-}%{F-}"
+						;;
+					u*)
+						# urgent desktop
+						wm_infos="${wm_infos}%{F$COLOR_URGENT_FG}%{B$COLOR_URGENT_BG}%{A:bspc desktop -f ${name}:}$PADDING$PADDING%{A}%{B-}%{F-}"
+						;;
+				esac
+				shift
+			done
+			;;
+	esac
+	printf "%s\n" "%{l}${music}${title}%{c}${wm_infos}%{r}${volume}${date}${clock}${power}"
+done
