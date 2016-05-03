@@ -1,11 +1,10 @@
+Xcursor.theme: Vanilla-DMZ-AA
 
-Xcursor.theme: Vanilla-DMZ
-
-URxvt.font: xft:ProFont:size=9
+URxvt.font: xft:ProFont:size=9,xft:comix
 URxvt.scrollBar: false
 URxvt.geometry: 88x25
 
-URxvt.background: [90]#222
+URxvt.background: [80]#222
 URxvt.foreground: #8E8F93
 URxvt.depth: 32
 
@@ -15,54 +14,32 @@ URxvt.colorUL: #9D9EA2
 
 URxvt.cursorColor: #FFFFFF
 
+! black
+*.color0:       #111111
+*.color8:       #181818
+! red
+*.color1:       #aa4450
+*.color9:       #ff6a6a
+! green
+*.color2:       #719611
+*.color10:      #b1d631
+! yellow
+*.color3:       #cc8800
+*.color11:      #ff9800
+! blue
+*.color4:       #6688aa
+*.color12:      #90b0d1
+! magenta
+*.color5:       #8f6f8f
+*.color13:      #8181a6
+! cyan
+*.color6:       #528b8b
+*.color14:      #87ceeb
+! white
+*.color7:       #d3d3d3
+*.color15:      #c1cdc1
+! stylized
+*.colorIT:      #719611
+*.colorBD:      #d3d3d3
+*.colorUL:      #528b8b
 
-! Base16 Solarized
-! Scheme: Ethan Schoonover (http://ethanschoonover.com/solarized)
-
-#define base00 #002b36
-#define base01 #073642
-#define base02 #586e75
-#define base03 #657b83
-#define base04 #839496
-#define base05 #93a1a1
-#define base06 #eee8d5
-#define base07 #fdf6e3
-#define base08 #dc322f
-#define base09 #cb4b16
-#define base0A #b58900
-#define base0B #859900
-#define base0C #2aa198
-#define base0D #268bd2
-#define base0E #6c71c4
-#define base0F #d33682
-
-!*.foreground:   base02
-!*.background:   base07
-!*.cursorColor:  base02
-
-URxvt*.color0:       base00
-URxvt*.color1:       base08
-URxvt*.color2:       base0B
-URxvt*.color3:       base0A
-URxvt*.color4:       base0D
-URxvt*.color5:       base0E
-URxvt*.color6:       base0C
-URxvt*.color7:       base05
-
-URxvt*.color8:       base03
-URxvt*.color9:       base08
-URxvt*.color10:      base0B
-URxvt*.color11:      base0A
-URxvt*.color12:      base0D
-URxvt*.color13:      base0E
-URxvt*.color14:      base0C
-URxvt*.color15:      base07
-
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-shell*.color16:      base09
-shell*.color17:      base0F
-shell*.color18:      base01
-shell*.color19:      base02
-shell*.color20:      base04
-shell*.color21:      base06
