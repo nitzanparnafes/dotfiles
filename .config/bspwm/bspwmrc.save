@@ -6,7 +6,7 @@
 # Declare variables
 
 PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=30
+PANEL_HEIGHT=28
 
 # And export them
 
@@ -14,8 +14,8 @@ export PANEL_FIFO PANEL_HEIGHT
 
 # BSPWM Settings
 
-bspc config border_width       2 
-bspc config window_gap         35
+bspc config border_width        2
+bspc config window_gap         25
 bspc config split_ratio         0.5
 bspc config borderless_monocle  true
 bspc config gapless_monocle     true
@@ -58,11 +58,10 @@ bspc config -d 5 top_padding 80
 
 # Colors
 
-#bspc config focused_border_color "#e0e0e0"
-bspc config focused_border_color "#949494"
-bspc config normal_border_color "#585858"
-bspc config active_border_color "#585858"
-bspc config urgent_border_color "#585858"
+bspc config focused_border_color "#e0e0e0"
+bspc config normal_border_color "#949494"
+bspc config active_border_color "#949494"
+bspc config urgent_border_color "#949494"
 
 
 # Rules
@@ -82,14 +81,14 @@ bspc rule -a terminal floating=off
 
 # Launch essential programs
 
-sxhkd -f 288 &
+sxhkd -f 100 &
 panel &
 #xrandr -r 144 -s 1920x1080 &
 razercfg -r 4 &
 compton --unredir-if-possible &
 nvpower &
 # Set wallpaper
-feh --bg-fill /home/$USER/Pictures/beach.jpg &
+feh --bg-fill /home/$USER/Pictures/valley.jpg &
 # Set mouse cursor
 xsetroot -cursor_name left_ptr &
 mpd &
@@ -106,7 +105,7 @@ firefox-bin &
 steam %U &
 thunar &
 
-sleep 1
+sleep 1.3
 
 # Launching terminals
 

@@ -4,8 +4,8 @@ URxvt.font: xft:ProFont:size=9,xft:comix
 URxvt.scrollBar: false
 URxvt.geometry: 88x25
 
-URxvt.background: [80]#222
-URxvt.foreground: #8E8F93
+URxvt.background: [80]#191815
+URxvt.foreground: #d1d2d3
 URxvt.depth: 32
 
 URxvt.colorBD: #9D9EA2
@@ -13,6 +13,10 @@ URxvt.colorIT: #9D9EA2
 URxvt.colorUL: #9D9EA2
 
 URxvt.cursorColor: #FFFFFF
+
+#dzen2.font: xft:ProFont:size=9
+dzen2.foreground: #d1d2d3
+dzen2.background: #191815
 
 ! black
 *.color0:       #111111

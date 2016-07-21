@@ -28,7 +28,7 @@ xtitle -sf 'T%s' > "$PANEL_FIFO" &
 # clock
 while true;
 	do
-		echo 'C' $(date +"%H:%M");
+		echo 'C' $(date +"%H:%M") ;
 	sleep 5;
 done > "$PANEL_FIFO" &
 

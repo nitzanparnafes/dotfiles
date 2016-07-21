@@ -11,7 +11,7 @@ while read -r line ; do
 	case $line in
 		D*)
 			# date output
-			date="$PADDING${line#?}$PADDING"
+			date="%{A1:dzen_cal:}$PADDING${line#?}$PADDING%{A}"
 			;;
 		R*)
 			# music info
@@ -19,7 +19,7 @@ while read -r line ; do
 			;;
 		C*)
 			# clock output
-			clock="$PADDING${line#?}$PADDING"
+			clock="%{A1:dzen_cal:}$PADDING${line#?}$PADDING%{A}"
 			;;
 		T*)
 			# xtitle output
@@ -74,5 +74,5 @@ while read -r line ; do
 			done
 			;;
 	esac
-	printf "%s\n" "%{l}${music}${title}%{c}${wm_infos}%{r}${volume}${date}${clock}${power}"
+	printf "%s\n" "%{l}${power}${title}%{c}${wm_infos}%{r}${volume}${clock}  "
 done
