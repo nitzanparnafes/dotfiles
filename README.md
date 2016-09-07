@@ -10,7 +10,7 @@ Programs I use:
 ------------- 
   compton  
   rofi  
-  bar (https://github.com/krypt-n/bar) 
+  bar (https://github.com/krypt-n/bar)   
   and another bar, for the titlebars (https://github.com/emgram769/bar)
   
 -------------   
