@@ -1,20 +1,25 @@
-Xcursor.theme: Vanilla-DMZ-AA
+! Xcursor.theme: Vanilla-DMZ-AA
+Xcursor.theme: mac-aqua-swirl-cursor
 
-URxvt.font: xft:ProFont:size=9,xft:comix
+URxvt.font: xft:ProFont:size=8,xft:comix
+! URxvt.font: xft:cure:size=11,xft:comix
 URxvt.scrollBar: false
 URxvt.geometry: 88x25
 
-URxvt.background: [80]#191815
+URxvt.background: #171D1D
+! URxvt.background: [90]#191815
 URxvt.foreground: #d1d2d3
 URxvt.depth: 32
-
+URxvt.internalBorder: 0
+! URxvt.borderColor: #0c1611
+!URxvt.borderColor: #152715
 URxvt.colorBD: #9D9EA2
 URxvt.colorIT: #9D9EA2
 URxvt.colorUL: #9D9EA2
 
 URxvt.cursorColor: #FFFFFF
 
-#dzen2.font: xft:ProFont:size=9
+! dzen2.font: xft:ProFont:size=9
 dzen2.foreground: #d1d2d3
 dzen2.background: #191815
 
@@ -47,4 +52,5 @@ dzen2.background: #191815
 *.colorBD:      #d3d3d3
 *.colorUL:      #528b8b
 
-
+rofi.color-normal: #171D1D,  #D1D2D3,  #171D1D,  #131B1B,  #AAA8A4
+rofi.color-window: #171D1D,  #191815

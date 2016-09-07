@@ -11,6 +11,6 @@ LINES=$((LINES + 2))
 date +'^bg(#191815) '
 date +''
 # current month, highlight header and today
-cal | sed -r -e "1,2 s/.*/^fg(#979286)&^fg()/"  -e "s/(^| )($TODAY)($| )/\1^bg(#191815)^fg(#979286)\2^fg()^bg()\3/") | dzen2 -x 1800 -y 20 -w 200 -h 17 -l $LINES -sa c -fn 'ProFont:size=9' -p -e 'onstart=uncollapse,hide;button3=exit;' -tw 6
+cal | sed -r -e "1,2 s/.*/^fg(#aaa8a4)&^fg()/"  -e "s/(^| )($TODAY)($| )/\1^bg(#191815)^fg(#394848)\2^fg()^bg()\3/") | dzen2 -x 1800 -y 40 -w 200 -h 17 -l $LINES -sa c -fn 'ProFont:size=8' -p -e 'onstart=uncollapse,hide;button3=exit;' -tw 6
 
 

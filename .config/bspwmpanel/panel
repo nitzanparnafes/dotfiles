@@ -5,7 +5,8 @@
 
 PANEL_FIFO=/tmp/panel-fifo
 
-PANEL_FONT_FAMILY="ProFont:size=8"
+#PANEL_FONT_FAMILY="ProFont:size=8"
+PANEL_FONT_FAMILY="cure:size=8"
 ICON_FONT="Stlarch:size=14"
 
 
@@ -19,7 +20,9 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
 
-bspc config top_padding $PANEL_HEIGHT
+TOP_PADDING=$((PANEL_HEIGHT + 20))
+#bspc config top_padding $PANEL_HEIGHT
+bspc config top_padding $TOP_PADDING
 bspc control --subscribe > "$PANEL_FIFO" &
 
 # title
@@ -79,6 +82,6 @@ echo P'' > $PANEL_FIFO &
 
 
 
-cat "$PANEL_FIFO" | panel_bar | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -f "$ICON_FONT" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" -u 1 | sh &
+cat "$PANEL_FIFO" | panel_bar | lemonbar -g 1850x$PANEL_HEIGHT+35+13 -f "$PANEL_FONT_FAMILY" -f "$ICON_FONT" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" -u 1 | sh &
 
 wait
