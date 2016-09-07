@@ -9,22 +9,24 @@ Programs I use:
 
 ------------- 
   compton  
-  dmenu2  
+  rofi  
   bar (https://github.com/krypt-n/bar)  
   
 -------------   
-Wallpaper: https://i.imgur.com/ZQRfOL1.jpg  
+Wallpaper: http://i.imgur.com/MK1gCx9.jpg  
 Web Browser: Firefox  
 Image Browser: Feh  
 File Manager: Thunar + Ranger  
 Music Player: mpd + ncmpcpp + mpc  
-Fonts: ProFont, Open-Sans, STLarch (icons in panel)  
+Fonts: ProFont, Open-Sans, cure, STLarch (icons in panel)  
 
 -------------  
 
 Preview:  
 
-![alt tag](http://i.imgur.com/7fSpfhv.png)  
+![alt tag](http://i.imgur.com/Scny7hQ.png)  
+
+Desktop album here: http://imgur.com/a/CvGZZ
 
 
 -------------
